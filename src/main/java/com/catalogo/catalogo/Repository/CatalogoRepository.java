@@ -11,6 +11,13 @@ import com.catalogo.catalogo.Model.Catalogo;
 public class CatalogoRepository {
     private List<Catalogo> productos = new ArrayList<>();
 
+    public CatalogoRepository(){
+        productos.add(new Catalogo(idAutoIncremental(), "Suscripcion 1", 1000, "categoria1"));
+        productos.add(new Catalogo(idAutoIncremental(), "Suscripcion 2", 2000, "categoria1"));
+        productos.add(new Catalogo(idAutoIncremental(), "Suscripcion 3", 3000, "categoria2"));
+        productos.add(new Catalogo(idAutoIncremental(), "Suscripcion 4", 4000, "categoria3"));
+    }
+
     public int idAutoIncremental() {
         return productos.size()+1;
     }
